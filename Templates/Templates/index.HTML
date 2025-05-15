@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flex Signer</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #0f0; padding: 20px; }
+    .roast { font-style: italic; color: #f55; margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Flex Signer</h1>
+  <p class="roast">While you're still using Xcode, I'm installing from Safari.</p>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label>Apple ID:</label><br>
+    <input type="text" name="apple_id" required><br>
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br>
+    <label>2FA Code (if needed):</label><br>
+    <input type="text" name="tfa"><br><br>
+
+    <label>Upload IPA:</label><br>
+    <input type="file" name="ipa" accept=".ipa" required><br><br>
+
+    <button type="submit">Sign It</button>
+  </form>
+
+  <form action="/refresh" method="post" style="margin-top: 2em;">
+    <button type="submit">Manual Refresh</button>
+  </form>
+</body>
+</html>
